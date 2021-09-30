@@ -16,6 +16,7 @@ import {
 } from '@ant-design/icons';
 
 import logo from '@src/assets/favicon.png';
+import Clock from '@components/Clock';
 import style from './style.less';
 
 const {
@@ -50,20 +51,23 @@ class PageLayout extends PureComponent {
             </div>
           </div>
           <div className={style.user}>
-            <Dropdown
-              overlay={(
-                <Menu onClick={this.clickSetting}>
-                  <Menu.Item key="/accountSetting">账号设置</Menu.Item>
-                </Menu>
-              )}
-              trigger={['click']}
-            >
-              <Button icon={<UserOutlined />} onClick={(e) => e.preventDefault()}>
-                jinghh@163.com
-                {' '}
-                <DownOutlined />
-              </Button>
-            </Dropdown>
+            <Clock />
+            <div style={{ alignItems: 'center', marginLeft: 10 }}>
+              <Dropdown
+                overlay={(
+                  <Menu onClick={this.clickSetting}>
+                    <Menu.Item key="/accountSetting">账号设置</Menu.Item>
+                  </Menu>
+                )}
+                trigger={['click']}
+              >
+                <Button icon={<UserOutlined />} onClick={(e) => e.preventDefault()}>
+                  jinghh@163.com
+                  {' '}
+                  <DownOutlined />
+                </Button>
+              </Dropdown>
+            </div>
           </div>
         </Header>
         <Layout>
