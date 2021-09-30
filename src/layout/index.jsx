@@ -62,7 +62,7 @@ class PageLayout extends PureComponent {
                 trigger={['click']}
               >
                 <Button icon={<UserOutlined />} onClick={(e) => e.preventDefault()}>
-                  jinghh@163.com
+                  admin@admin.com
                   {' '}
                   <DownOutlined />
                 </Button>
