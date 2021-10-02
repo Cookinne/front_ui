@@ -1,6 +1,3 @@
-/**
- * @summary 时钟组件
- */
 import React, { useEffect, useState } from 'react';
 import { zeroPad } from '@utils/number';
 
