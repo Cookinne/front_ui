@@ -15,14 +15,6 @@ const Index = (props) => {
     setA([1, 2, 3, 4, 5]);
   }, [props.updateList]);
 
-  const contentStyle = {
-    height: '600px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
-
   return (
     <div className={style.container}>
       <div className={style.title}>FRONT_UI 🙁</div>
