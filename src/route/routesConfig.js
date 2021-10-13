@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import App from '@containers/App';
 import Index from '@containers/Index';
 import Page1 from '@containers/Page1';
+import Page2 from '@containers/Page2';
 
 const routesConfig = [{
   component: App,
@@ -29,7 +30,7 @@ const routesConfig = [{
       path: '/page2',
       exact: true,
       strict: false,
-      component: Index,
+      component: Page2,
     },
   ],
 }];

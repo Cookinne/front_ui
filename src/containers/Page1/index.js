@@ -9,7 +9,7 @@ const Page1 = (props) => {
   const [a, setA] = useState([]);
 
   useEffect(() => {
-    console.info('this is page - useEffect');
+    console.info('this is page1 - useEffect');
   }, []);
   useEffect(() => {
     setA([1, 2, 3, 4, 5]);
