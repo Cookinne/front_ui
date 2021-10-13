@@ -29,14 +29,8 @@ const devConfig = {
         secure: false,
         cookieDomainRewrite: 'localhost',
       },
-      '/static/data': {
-        target: API_URL,
-        changeOrigin: true,
-        secure: false,
-        cookieDomainRewrite: 'localhost',
-      },
       '/mock': {
-        target: 'http://yapi.insight.ecc.huobiapps.com',
+        target: 'http://yapi.testtesttest.com',
         pathRewrite: { '^/mock': '/mock' },
         changeOrigin: true,
         secure: false,

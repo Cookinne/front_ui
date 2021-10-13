@@ -8,11 +8,12 @@ import {
   Button,
 } from 'antd';
 import { shape, object } from 'prop-types';
-import classnames from 'classnames';
 import {
   DownOutlined,
   UserOutlined,
   HomeOutlined,
+  GoldOutlined,
+  FundViewOutlined,
 } from '@ant-design/icons';
 
 import logo from '@src/assets/favicon.png';
@@ -41,14 +42,10 @@ class PageLayout extends PureComponent {
     return (
       <Layout className={style.layout}>
         <Header className={style.header}>
-          <div
-            className={(classnames(style['logo-container']))}
-          >
-            <div>
-              <img src={logo} alt="logo" className={style.logo} />
-              {' '}
-              FRONT_UI
-            </div>
+          <div>
+            <img src={logo} alt="logo" className={style.logo} />
+            {' '}
+            FRONT_UI
           </div>
           <div className={style.user}>
             <Clock />
@@ -74,14 +71,14 @@ class PageLayout extends PureComponent {
           <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
             <Menu mode="inline" theme="dark" defaultSelectedKeys={['/index']} selectedKeys={[pathname]} className={style.menu}>
               <Menu.Item key="/index" icon={<HomeOutlined />}>
-                <span>首页</span>
+                <span>Index</span>
                 <Link to="/index" />
               </Menu.Item>
-              <Menu.Item key="/page1" icon={<HomeOutlined />}>
+              <Menu.Item key="/page1" icon={<FundViewOutlined />}>
                 <span>PAGE1</span>
                 <Link to="/page1" />
               </Menu.Item>
-              <Menu.Item key="/page2" icon={<HomeOutlined />}>
+              <Menu.Item key="/page2" icon={<GoldOutlined />}>
                 <span>PAGE2</span>
                 <Link to="/page2" />
               </Menu.Item>
@@ -92,8 +89,8 @@ class PageLayout extends PureComponent {
             style={{ minHeight: 280 }}
           >
             <div className={style.containerDiv}>{children.props.children}</div>
-            <Footer style={{ textAlign: 'center' }}>
-              Front UI Platform ©2021 Created by Cookinne 🐶
+            <Footer className={style.footer}>
+              Front UI Platform ©2021 Created by Cookinne 🔨
             </Footer>
           </Content>
         </Layout>

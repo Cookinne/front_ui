@@ -28,10 +28,15 @@ npm start
 
 ```
 
-### 浏览器访问：[点这里](http://localhost:9901)
+<!-- ### 浏览器访问：[点这里](http://localhost:9901) -->
 
 ## 打包
 
 ``` bash
 npm run build
 ```
+
+### 预览
+<p align='center'>
+  <img src='src/assets/readme.jpg' title='images' style='max-width:600px'></img>
+</p>

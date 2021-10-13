@@ -1,7 +1,11 @@
 .container {
-  height: 100%;
-  align-items: center;
   display: flex;
+  align-items: center;
+  background: url('../../assets/index.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 0%;
+  height: 100%;
   .title {
     width: 100%;
     text-align: center;

@@ -17,7 +17,7 @@ const Index = (props) => {
 
   return (
     <div className={style.container}>
-      <div className={style.title}>FRONT_UI 🙁</div>
+      <div className={style.title}>FRONT_UI  🔨</div>
     </div>
   );
 };

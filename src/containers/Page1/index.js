@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import PropTypes, { func } from 'prop-types';
 import { Carousel } from 'antd';
 import img1 from '@src/assets/img1.jpeg';
 import img3 from '@src/assets/img3.jpeg';
 import img4 from '@src/assets/img4.jpeg';
-import * as actions from './actions';
 import style from './style.scss';
 
 const Page1 = (props) => {
   const [a, setA] = useState([]);
 
   useEffect(() => {
-    console.info('this is index - useEffect');
+    console.info('this is page - useEffect');
   }, []);
   useEffect(() => {
     setA([1, 2, 3, 4, 5]);

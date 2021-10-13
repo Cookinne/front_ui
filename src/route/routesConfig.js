@@ -13,7 +13,6 @@ const routesConfig = [{
       exact: true,
       component: () => <Redirect to="/index" />,
     },
-    // 首页
     {
       path: '/index',
       exact: true,
