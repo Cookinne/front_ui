@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Steps } from 'antd';
-import style from './style.scss';
+import echarts from 'echarts';
 
-const { Step } = Steps;
+import renderOptions from './options';
+import mockdata from './mockData';
+import style from './style.scss';
 
 const Page2 = (props) => {
   useEffect(() => {
-    console.info('this is page2 - useEffect');
+    const eChartsDiv = echarts.init(document.querySelector('#eChartsDiv'));
+    eChartsDiv.setOption(renderOptions(mockdata));
   }, []);
 
   return (
     <div className={style.container}>
-      <h2>Page2</h2>
-      <Steps style={{ width: '70%', margin: 'auto', marginTop: 40 }} current={1}>
-        <Step title="完成" description="任务已完成" />
-        <Step title="执行中" subTitle="Left 00:00:08" description="任务执行中" />
-        <Step title="等待" description="任务等待中" />
-      </Steps>
+      <div className={style.wrapper}>
+        <div className={style.box}>
+          <div className={style.circle} />
+          <div id="eChartsDiv" className={style.echarts} style={{ width: '100%', height: '100%' }} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,3 +1,56 @@
 .container {
   padding: 10px;
+  height: calc(100vh - 132px);
+  overflow-y: auto;
+  overflow: auto;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    width: 700px;
+    margin: auto;
+  }
+  
+  .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-image: url('./images/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .box:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  .circle {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background-image: url('./images/circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: circle 16s infinite linear;
+  }
+
+  @keyframes circle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .echarts {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
 }

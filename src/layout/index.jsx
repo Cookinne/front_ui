@@ -17,6 +17,7 @@ import {
 } from '@ant-design/icons';
 
 import logo from '@src/assets/favicon.png';
+import beian from '@src/assets/beian.png';
 import Clock from '@components/Clock';
 import style from './style.less';
 
@@ -90,7 +91,9 @@ class PageLayout extends PureComponent {
           >
             <div className={style.containerDiv}>{children.props.children}</div>
             <Footer className={style.footer}>
-              Front UI Platform ©2021 Created by Cookinne 🔨
+              Front UI Platform &nbsp;&nbsp;
+              <img src={beian} alt="工信部备案" />
+              &nbsp;&nbsp; ©2021 Created by Cookinne
             </Footer>
           </Content>
         </Layout>
